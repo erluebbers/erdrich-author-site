@@ -1,13 +1,40 @@
 import '../Components.css';
-import React from "react"
+import React, { useState } from "react"
 
-function ReviewForm() {
+function ReviewForm( {handleSubmit} ) {
+  const [formData, setFormData] = useState({
+    id: "",
+    name: "",
+    stars: "",
+    title: "",
+    post: "",
+  })
+
+  function handleChange(e) {
+    const name = e.target.name;
+    let value = e.target.value;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault()
+    fetch("http://localhost:3000/posts", {
+      method: "POST",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+  }
+
+  console.log(formData)
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <h3>Submit a Review!</h3>
-        <select>
+        <select name="title" onChange={handleChange} value={formData.title}>
           <option value="The Round House">The Round House</option>
           <option value="The Night Watchman">The Night Watchman</option>
           <option value="Love Medicine">Love Medicine</option>
@@ -23,26 +50,29 @@ function ReviewForm() {
           type="text"
           name="name"
           placeholder="Enter your username..."
-          // className="input-text"
-          // value={newToy.name}
-          // onChange={handleChange}
+          onChange={handleChange}
+          value={formData.name}
         />
         <br />
         <input
           type="textarea"
-
           name="post"
           placeholder="Tell us your thoughts..."
-          // className="input-text"
-          // value={newToy.image}
-          // onChange={handleChange}
+          onChange={handleChange}
+          value={formData.post}
         />
         <br />
+        <select name="stars" onChange={handleChange} value={formData.stars}>
+          <option value="1">1</option>
+          <option value="2">3</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
         <input
           type="submit"
           name="submit"
           value="Post"
-          // className="submit"
         />
       </form>
     </div>
