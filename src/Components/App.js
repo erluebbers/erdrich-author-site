@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar"
 import Home from "./Home";
 import BookContainer from "./BookContainer";
+import ReviewContainer from "./ReviewContainer"
 
 function App() {
   
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route exact path="/books">
           <BookContainer />
+        </Route>
+        <Route exact path="/reviews">
+          <ReviewContainer />
         </Route>
       </Switch>
     </div>
