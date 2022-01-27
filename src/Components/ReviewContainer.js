@@ -1,5 +1,5 @@
 import '../Components.css';
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReviewForm from "./ReviewForm"
 import ReviewList from "./ReviewList"
 
@@ -8,9 +8,9 @@ function ReviewContainer() {
 
   useEffect(() => {
     fetch("http://localhost:3000/posts")
-      .then(r =r.json())
+      .then(r => r.json())
       .then(data => setReviews(data))
-  })
+  }, [])
 
 
   return (

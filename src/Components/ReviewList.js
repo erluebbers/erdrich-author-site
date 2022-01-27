@@ -1,20 +1,11 @@
 import '../Components.css';
-import React, { useState, useEffect} from "react";
+import React from "react";
 import Review from "./Review"
 
-function ReviewList() {
-  const [reviews, setReviews] = useState([])
-
-  useEffect(() => {
-    fetch("http://localhost:3000/posts")
-      .then(r =r.json())
-      .then(data => setReviews(data))
-  })
-
+function ReviewList( {reviews} ) {
   const displayReviews = reviews.map(review => {
-    return <Review review={review}/>
+    return <Review review={review} key={review.id}/>
   })
-
 
   return (
     <div>
