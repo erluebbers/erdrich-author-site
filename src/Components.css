@@ -34,3 +34,20 @@
   background: coral;
   color: whitesmoke;
 }
+
+.card {
+  border: grey solid 1px;
+  padding: 1rem;
+  width: auto;
+  height: auto;
+  display: inline;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px coral;
+}
+
+.book-avatar {
+  float: left;
+  padding: 4rem;
+}
+
+
