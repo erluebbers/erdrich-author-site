@@ -14,10 +14,16 @@ function NavBar() {
         Home
       </NavLink>
       <NavLink
-        className="App-Link"
+        className="App-link"
         exact to="/books" 
       >
         Books
+      </NavLink>
+      <NavLink
+        className="App-link"
+        exact to="/reviews" 
+      >
+        Reviews
       </NavLink>
     </div>
   );
