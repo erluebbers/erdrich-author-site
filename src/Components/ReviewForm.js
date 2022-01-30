@@ -32,9 +32,10 @@ function ReviewForm( {handleSubmit} ) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form-inline">
         <h3>Submit a Review!</h3>
-        <select name="title" onChange={handleChange} value={formData.title}>
+        <select name="title" onChange={handleChange} value={formData.title} className="form-input">
+          <option value="Select Title">Select Title</option>
           <option value="The Round House">The Round House</option>
           <option value="The Night Watchman">The Night Watchman</option>
           <option value="Love Medicine">Love Medicine</option>
@@ -47,6 +48,7 @@ function ReviewForm( {handleSubmit} ) {
           <option value="The Beet Queen">The Beet Queen</option>
         </select>
         <input
+          className='form-input'
           type="text"
           name="name"
           placeholder="Enter your username..."
@@ -55,6 +57,7 @@ function ReviewForm( {handleSubmit} ) {
         />
         <br />
         <input
+          className='form-input'
           type="textarea"
           name="post"
           placeholder="Tell us your thoughts..."
@@ -62,7 +65,8 @@ function ReviewForm( {handleSubmit} ) {
           value={formData.post}
         />
         <br />
-        <select name="stars" onChange={handleChange} value={formData.stars}>
+        <select name="stars" onChange={handleChange} value={formData.stars} className='form-input'>
+          <option value="How Many Stars?">How Many Stars?</option>
           <option value="1">1</option>
           <option value="2">3</option>
           <option value="3">3</option>
