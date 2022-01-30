@@ -1,3 +1,21 @@
+Louise Erdrich Fan App - 
+
+Introduction: 
+
+Component Structure:
+├── App
+     ├── NavBar
+     ├── Home
+     ├── BookContainer
+          ├── Book
+     ├── ReviewContainer
+          ├── ReviewForm
+          ├── ReviewList
+              ├── Review
+
+
+React Resources:
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
