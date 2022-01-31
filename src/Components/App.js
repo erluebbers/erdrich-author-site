@@ -1,5 +1,5 @@
 import '../Components.css';
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar"
 import Home from "./Home";
