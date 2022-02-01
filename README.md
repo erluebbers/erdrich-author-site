@@ -18,7 +18,9 @@ Features:
 
 - The BookContainer component uses a fetch (GET) request to a JSON Database to create cards that contain basic information about the books, including name, title, pages, synopsis, and number of likes. The number of likes can be changed (via PATCH request) using the like button as well. 
 
-- 
+- The ReviewContainer component has a form at the top for users to enter data and then a review list at the bottom for users to see each other's posts. The posts are themselves stored on the database and fetched from the JSON server. 
+
+-----
 
 React Resources:
 
