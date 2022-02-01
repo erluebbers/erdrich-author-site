@@ -1,7 +1,7 @@
 import '../Components.css';
 import React, { useState } from "react"
 
-function ReviewForm( {handleSubmit} ) {
+function ReviewForm( {handleSubmit, setReviews} ) {
   const [formData, setFormData] = useState({
     id: "",
     name: "",
@@ -26,6 +26,9 @@ function ReviewForm( {handleSubmit} ) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
     })
+    fetch("http://localhost:3000/posts")
+    .then(r => r.json())
+    .then(data => setReviews(data))
   }
 
   console.log(formData)

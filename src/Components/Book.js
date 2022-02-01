@@ -1,7 +1,7 @@
 import '../Components.css';
 import React from "react"
 
-function Book( {book} ) {
+function Book( {book, setBooks} ) {
   const { id, title, image, description, likes, pages } = book
 
   function handleLike() {
@@ -10,6 +10,9 @@ function Book( {book} ) {
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ likes: likes + 1})
     })
+    fetch("http://localhost:3000/books")
+      .then(r => r.json())
+      .then(data => setBooks(data))
   }
 
   return (

@@ -7,7 +7,6 @@ import BookContainer from "./BookContainer";
 import ReviewContainer from "./ReviewContainer"
 
 function App() {
-  
 
   return (
     <div>

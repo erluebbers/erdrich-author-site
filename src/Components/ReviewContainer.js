@@ -14,8 +14,8 @@ function ReviewContainer() {
 
   return (
     <div>
-      <ReviewForm />
-      <ReviewList reviews={reviews}/>
+      <ReviewForm setReviews={setReviews}/>
+      <ReviewList reviews={reviews} />
     </div>
   );
 

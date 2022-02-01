@@ -12,7 +12,7 @@ function BookContainer() {
   }, [])
 
   const displayBooks = books.map(book => {
-    return <Book book={book} key={book.id}/>
+    return <Book book={book} key={book.id} setBooks={setBooks}/>
   })
 
   return (
