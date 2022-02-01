@@ -1,6 +1,6 @@
 Louise Erdrich Fan App - 
 
-Introduction: 
+Introduction: This is an app to explore the works of fiction by Louise Erdrich. It is an app created using React that displays her books and provides users with an opportunity to interact with her work via blog posts. The component structure is below and the features are detailed as well. 
 
 Component Structure:
 ├── App
@@ -13,6 +13,12 @@ Component Structure:
           ├── ReviewList
               ├── Review
 
+Features:
+- The NavBar component utilizes client-side routing to display the home page, which includes a short bio and picture (both from publisher Harper Collins: https://www.harpercollins.com/blogs/authors/louise-erdrich), as well as the list of works in "/books" and the blog at "/posts"
+
+- The BookContainer component uses a fetch (GET) request to a JSON Database to create cards that contain basic information about the books, including name, title, pages, synopsis, and number of likes. The number of likes can be changed (via PATCH request) using the like button as well. 
+
+- 
 
 React Resources:
 
