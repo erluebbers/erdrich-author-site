@@ -4,14 +4,14 @@ Introduction: This is an app to explore the works of fiction by Louise Erdrich. 
 
 Component Structure:
 ├── App
-     ├── NavBar
-     ├── Home
-     ├── BookContainer
-          ├── Book
-     ├── ReviewContainer
-          ├── ReviewForm
-          ├── ReviewList
-              ├── Review
+|     ├── NavBar
+|     ├── Home
+|     ├── BookContainer
+|          ├── Book
+|     ├── ReviewContainer
+|          ├── ReviewForm
+|          ├── ReviewList
+|              ├── Review
 
 Features:
 - The NavBar component utilizes client-side routing to display the home page, which includes a short bio and picture (both from publisher Harper Collins: https://www.harpercollins.com/blogs/authors/louise-erdrich), as well as the list of works in "/books" and the blog at "/posts"
